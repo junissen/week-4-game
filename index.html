@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>Crystal Collector</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel ="stylesheet" type ="text/css" href ="assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Kavivanar|Lato" rel="stylesheet">
+		<link rel ="icon" href ="assets/images/im_iconcrystal.jpg">
+
+	</head>
+
+	<body>
+
+		<div class = 'container'>
+
+			<div class = 'jumbotron'>
+				<h1 class = 'display-3'>
+					Crystal Collector
+				</h1>
+				<p class = 'lead'>
+					To win the game, match your user score to the random number. If you go over, you lose!
+				</p>
+			</div>
+
+
+			<div class = 'container_game'>
+
+				<div class = 'row'>
+
+					<div class = 'col-lg-9'>
+
+						<div class = 'card directions'>
+							<div class = 'card-body'>
+
+								<h4 class = 'card-title'>Directions</h4>
+
+								<p> You will be given a random number at the start of the game. Each crystal below has a given hidden value. Clicking on a crystal will add its value to your total score. </p>
+
+								<p>Each time you start a new game a new random number will be generated and the value of each crystal will change. </p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class = 'col-lg-3'>
+
+						<div class = 'card score_card'>
+							<div class = 'card-body'>
+
+								<div id = 'score_body'>
+									<div>
+										<h4 id = 'wins'>Wins: </h4>
+									</div> 
+									<div>
+										<h4 id = 'losses'>Losses: </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class = 'row'>
+
+					<div class = 'col-lg-12'>
+
+						<div class = 'card crystals'>
+							<div class = 'card-body'>
+
+								<div id = 'crystal'>
+									<button class="btn btn-default crystal" type="submit" id = 'crystal_1'>
+										<img src = 'assets/images/img_1.png' height= '100'>
+									</button>
+									<button class="btn btn-default crystal" type="submit" id = 'crystal_2'>
+										<img src = 'assets/images/img_2.png' height= '100'>
+									</button>
+									<button class="btn btn-default crystal" type="submit" id = 'crystal_3'>
+										<img src = 'assets/images/img_3.png' height= '100'>
+									</button>
+									<button class="btn btn-default crystal" type="submit" id = 'crystal_4'>
+										<img src = 'assets/images/img_4.png' height= '100'>
+									</button>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class = 'row'>
+
+					<div class = 'col-lg-6'>
+						<div class = 'card random'>
+							<div class = 'card-body random_number'>
+								Random number:
+							</div>
+						</div>
+					</div>
+
+					<div class = 'col-lg-6'>
+						<div class="card user">
+			  				<div class="card-body user_score">
+								User Score:
+			  				</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class = 'row'>
+
+					<div class = 'col-md-12'>
+
+						<div id = 'alert'>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src ="assets/javascript/game.js"></script>
+	
+
+	</body>
+
+</html>
+
+<!-- NOTE: CHANGE TO MULTIPLE ROWS -->

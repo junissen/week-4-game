@@ -1,0 +1,80 @@
+body {
+	background-image: url("../images/escheresque_ste.png")
+}
+
+.display-3,
+.card-title,
+#wins,
+#losses,
+#alert,
+.random_number,
+.user_score {
+	font-family: 'Kavivanar', cursive;
+}
+
+
+.lead,
+p {
+	font-family: 'Lato', sans-serif;
+}
+
+.random_number,
+.user_score {
+	font-size: 18px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.lead {
+	text-align: center;
+}
+
+.directions {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 20px;
+	height: 80%;
+	background-color: #eee;
+}
+
+.score_card {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: #eee;
+}
+
+
+.crystals {
+	width: 100%;
+	margin: 0px auto;
+	margin-top: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+}
+
+.random {
+	width: 90%;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	text-align: center;
+	background-color: #eee;
+}
+
+.user {
+	width: 90%;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: #eee;
+}
+
+#alert {
+	text-align: center;
+}
