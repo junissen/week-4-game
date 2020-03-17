@@ -27,6 +27,10 @@ h1 {
 	text-align: center;
 }
 
+.jumbotron {
+	margin-top: 20px;
+}
+
 .lead {
 	text-align: center;
 }

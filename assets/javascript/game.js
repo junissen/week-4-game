@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
 	var game_variables = {
@@ -8,7 +6,31 @@ $(document).ready(function(){
 		user_score: 0,
 		wins: 0, 
 		losses: 0,
+		crystal_images: ["img_1.png", "img_2.png", "img_3.png", "img_4.png"],
 
+		image_shuffler: function(array) {
+			var ctr = array.length, temp, index;
+			while (ctr > 0) {
+				index = Math.floor(Math.random() * ctr);
+				ctr--;
+				temp = array[ctr];
+				array[ctr] = array[index]
+				array[index] = temp;
+			}
+			return array
+		},
+
+		crystal_location_generator: function(array) {
+			$('.crystal').empty()
+			$.each(array, function(i, el) {
+				var crystal_image = $("<img>")
+				$('#crystal_' + (i+1)).append(crystal_image);
+				crystal_image.attr("src", "assets/images/" + el);
+				crystal_image.attr("height", "100")
+
+			})
+		},
+	
 		random_number_generator: function(min,max) {
 			min = Math.ceil(min);
 			max = Math.floor(max);
@@ -55,10 +77,15 @@ $(document).ready(function(){
 
 	};
 
-	// Random number generator for computer number and crystal values
+	function start_game() {
+		let crystal_array = game_variables.image_shuffler(game_variables.crystal_images)
+		game_variables.crystal_location_generator(crystal_array)
+		game_variables.random_number_generator(19,121);
+		game_variables.crystal_number_generator(1, 13);
+	}
 
-	game_variables.random_number_generator(19,121);
-	game_variables.crystal_number_generator(1, 13);
+	// Random number generator for computer number and crystal values
+	start_game();
 
 	// Win and loss tracker
 
@@ -117,8 +144,7 @@ $(document).ready(function(){
 			game_variables.crystal_values = [];
 			$('#user_score').text(game_variables.user_score);
 			$('#win_number').html('<h4>' + game_variables.wins + '</h4>');
-			game_variables.random_number_generator(19,121);
-			game_variables.crystal_number_generator(1, 13);
+			start_game();
 		}
 
 		if (parseInt(game_variables.user_score) > parseInt(game_variables.random_number)) {
@@ -147,8 +173,7 @@ $(document).ready(function(){
 			game_variables.crystal_values = [];
 			$('#user_score').text(game_variables.user_score);
 			$('#loss_number').html('<h4>' + game_variables.losses + '</h4>');
-			game_variables.random_number_generator(19,121);
-			game_variables.crystal_number_generator(1, 13);
+			start_game();
 		}
 
 	});
